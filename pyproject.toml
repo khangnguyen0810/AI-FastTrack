@@ -1,0 +1,30 @@
+[project]
+name = "my-assignments"
+version = "0.1.0"
+description = "AI Engineering Fast-Track v12 - Member Assignments (W1-W8)"
+readme = "README.md"
+authors = [
+    { name = "khangnguyen0810", email = "khangnguyen081003@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110,<1",
+    "httpx>=0.27,<1",
+    "openai>=1.90,<3",
+    "psycopg[binary]>=3,<4",
+    "pydantic>=2,<3",
+    "pytest>=8,<10",
+    "python-dotenv>=1,<2",
+    "uvicorn>=0.30,<1",
+]
+
+[project.scripts]
+my-assignments = "my_assignments:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+pythonpath = ["src", ".."]
+testpaths = ["tests"]
